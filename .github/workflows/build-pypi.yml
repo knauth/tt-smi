@@ -9,7 +9,7 @@ on:
 jobs:
   # Build wheel for Python
   build-wheel:
-    name: Build abi3 wheel for Python 3.11+ 📦
+    name: Build wheel for Python
     runs-on: ubuntu-24.04
     steps:
     - name: Checkout
