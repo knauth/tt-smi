@@ -50,7 +50,7 @@ jobs:
         for file in ../*.deb; do
           if [ -f "$file" ]; then
             base=$(basename "$file" .deb)
-            mv "$file" "~/${base}-ubuntu${{ matrix.ubuntu-version }}.deb"
+            mv "$file" "${HOME}/${base}-ubuntu${{ matrix.ubuntu-version }}.deb"
           fi
         done
     
