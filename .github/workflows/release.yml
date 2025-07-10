@@ -1,4 +1,4 @@
-name: Release
+name: Create Release
 
 on:
   workflow_dispatch:
@@ -68,7 +68,7 @@ jobs:
 
   publish-to-pypi:
     name: Publish Python 🐍 distribution 📦 to PyPI
-    needs: [build-pypi, build-debian]
+    needs: [build-pypi, build-debian, create-release]
     runs-on: ubuntu-latest
     environment:
       name: pypi
@@ -88,7 +88,7 @@ jobs:
 
   publish-to-testpypi:
     name: Publish Python 🐍 distribution 📦 to TestPyPI
-    needs: [build-pypi, build-debian]
+    needs: [build-pypi, build-debian, create-release]
     runs-on: ubuntu-latest
     environment:
       name: testpypi
