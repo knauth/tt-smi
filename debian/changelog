@@ -1,3 +1,13 @@
+tt-smi (3.0.27) noble; urgency=medium
+
+  [ June Knauth (tt) ]
+  * Fix ref input to builds
+
+  [ Tenstorrent Releases ]
+  * Version bump to v3.0.27
+
+ -- Tenstorrent Releases <releases@tenstorrent.com>  Fri, 11 Jul 2025 01:13:29 +0000
+
 tt-smi (3.0.26) noble; urgency=medium
 
   [ June Knauth (tt) ]
