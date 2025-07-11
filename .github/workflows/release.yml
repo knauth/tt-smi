@@ -263,7 +263,7 @@ jobs:
 
   create-release:
     name: Create GitHub Release
-    needs: [build-pypi, build-debian, tagrelease]
+    needs: [build-pypi, build-debian, tagrelease, versionchange]
     runs-on: ubuntu-latest
     permissions:
       contents: write
