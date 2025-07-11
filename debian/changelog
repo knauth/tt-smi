@@ -1,3 +1,36 @@
+tt-smi (3.0.26) noble; urgency=medium
+
+  [ June Knauth (tt) ]
+  * Update gitignore
+  * Add pyluwen and tt-tools-common depends
+  * Install build deps
+  * Skip tests during package build
+  * TEMP: Remove tt-tools-common and pyluwen as deps
+  * Update build workflows
+  * Add release.yml
+  * R: Don't inherit secrets in build-debian
+  * Remove community-issue-tagging workflow
+  * Call PyPI publishing in release.yml
+  * R: Properly path to .debs to upload
+  * R: Only publish after release
+  * R: Build debs to root directory
+  * Use a matrix to build ubuntu versions
+  * R: Fix home syntax
+  * Add temp branch and version bump
+  * Use version from pyproject.toml
+  * Add changelogs, tags, and merging
+  * Fix job IDs
+  * I don't remember
+  * Remove rm debian
+  * Properly name release
+  * Make the workflow graph prettier
+  * Fix inputs to release create
+
+  [ Tenstorrent Releases ]
+  * Version bump to v3.0.26
+
+ -- Tenstorrent Releases <releases@tenstorrent.com>  Fri, 11 Jul 2025 01:00:26 +0000
+
 tt-smi (3.0.24-1) unstable; urgency=medium
 
   * Initial Debian packaging
