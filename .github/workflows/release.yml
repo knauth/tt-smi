@@ -80,7 +80,7 @@ jobs:
           DEFAULT_BUMP: patch
           RELEASE_BRANCHES: ${{ needs.create-temp-branch.outputs.temp_branch_ref }}
           DRY_RUN: true
-          TAG_CONTEXT: branch
+          TAG_CONTEXT: repo
           PRERELEASE: false
       - name: What NEW Version?
         id: new-python-version
