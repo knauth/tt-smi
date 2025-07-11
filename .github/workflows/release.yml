@@ -239,7 +239,8 @@ jobs:
     needs:
       - versionchange
       - changelogs
-      - buildall
+      - build-pypi
+      - build-debian
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -302,7 +303,6 @@ jobs:
         merge-multiple: true
     
     - name: Create GitHub Release
-      id: generaterelease
       env:
         GITHUB_TOKEN: ${{ github.token }}
       run: |
@@ -316,8 +316,8 @@ jobs:
   ###
   mergeback:
     needs:
-      - tempbranch
-      - generaterelease
+      - create-temp-branch 
+      - create-release
     runs-on: ubuntu-latest
     permissions:
       contents: write
