@@ -219,7 +219,7 @@ jobs:
       - versionchange
     uses: ./.github/workflows/build-pypi.yml
     with:
-      ref: ${{ needs.create-temp-branch.outputs.new-branch-ref }}
+      ref: ${{ needs.create-temp-branch.outputs.temp_branch_ref}}
     secrets: inherit
 
   build-debian:
@@ -228,7 +228,7 @@ jobs:
       - versionchange
     uses: ./.github/workflows/build-debian.yml
     with:
-      ref: ${{ needs.create-temp-branch.outputs.new-branch-ref }}
+      ref: ${{ needs.create-temp-branch.outputs.temp_branch_ref }}
     secrets: inherit
 
     # Tag the Release
