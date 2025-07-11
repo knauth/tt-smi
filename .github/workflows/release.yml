@@ -181,9 +181,7 @@ jobs:
           EMAIL: releases@tenstorrent.com
           NAME: Tenstorrent Releases
       - name: Link the Debian build stuff in as 'debian/'
-        run: rm debian
-      - run:  ln -s debian.debian debian
-      - run: ls -lah
+        run:  ln -s debian.debian debian
       - name: Generate Debian Changelog
         run: |
           gbp dch \
@@ -265,7 +263,7 @@ jobs:
 
   create-release:
     name: Create GitHub Release
-    needs: [build-pypi, build-debian]
+    needs: [build-pypi, build-debian, tagrelease]
     runs-on: ubuntu-latest
     permissions:
       contents: write
